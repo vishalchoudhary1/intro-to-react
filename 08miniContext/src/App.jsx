@@ -1,15 +1,13 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
-
+import userContext from './context/userContext'
+import userContextProvider from './context/userContextProvider'
 function App() {
   
 
   return (
-   <>
+   <userContextProvider>
    <h1>react</h1>
-   </>
+   </userContextProvider>
   )
 }
 
