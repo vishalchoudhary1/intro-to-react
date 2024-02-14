@@ -1,6 +1,20 @@
-import React from "react";
-
+import React, { useState } from "react";
+import { UseTodo } from "../contexts/TodoContext";
 function TodoItem({ todo }) {
+  const [isTodoEditable, setIsTodoEditable] = useState(false);
+  // destuctured the todo property(id,todo, completed) of todoContext from above passed parameter
+  const [todoMsg, setTodoMsg] = useState(todo.todo);
+  const { updateTodo, deleteTodo, toggleComplete } = UseTodo();
+
+  const editTodo = () => {
+    // we are only updating single todo property here
+    updateTodo(todo.id, { ...todo, todo: todoMsg });
+    setIsTodoEditable(false);
+  };
+
+  const toggleCompleted = () => {
+    toggleComplete(todo.id);
+  };
   return (
     <div
       className={`flex border border-black/10 rounded-lg px-3 py-1.5 gap-x-3 shadow-sm shadow-white/50 duration-300  text-black ${
