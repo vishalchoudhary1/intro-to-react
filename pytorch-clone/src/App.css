@@ -1,0 +1,32 @@
+*{
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+html,body{
+  height: 100%;
+  width: 100%;
+  /* font-family: a; */
+}
+
+div{
+  display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 20px;
+    position: absolute;
+    height: 15vh;
+    width: 100vw;
+    background-color: #fff;
+    top:0%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    padding-right: 100px;
+    font-family: 'Courier New', Courier, monospace;
+    color: black;
+}
+
+.logo{
+  padding-left: 100px;
+}

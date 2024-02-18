@@ -24,10 +24,7 @@ export const todoSlice = createSlice({
     // Update the text of a todo by finding its ID in the action payload
     updateTodo: (state, action) => {
       // Use map to update the text of the matching todo, keeping other properties unchanged
-      state.todos = state.todos.map((todo) =>
-        todo.id === action.payload
-          ? { ...todo, text: action.payload.text }
-          : todo
+      state.todos = state.todos.map((todo) => todo.id === action.payload ? { ...todo, text: action.payload.text } : todo
       );
     },
   },
